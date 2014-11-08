@@ -35,6 +35,8 @@ BufferPut.prototype.varint = function(i) {
     this.word8(0xFF);
     this.word64le(i);
   }
+
+  return this;
 };
 
 [8, 16, 24, 32, 64].forEach(function(bits) {
